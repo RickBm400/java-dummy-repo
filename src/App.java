@@ -14,6 +14,8 @@ public class App {
         // System.exit(1);
         // }
 
+        Integer ino = Integer.parseInt("110");
+        System.out.println(ino > 0 || ino < 200);
         Console input = System.console();
         Integer totalPeople = Integer.parseInt(input.readLine("Numero de personas en el poblado"));
 
