@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "java-dummy-repo_8a0a614a"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
