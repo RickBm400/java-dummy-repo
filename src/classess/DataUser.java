@@ -1,16 +1,14 @@
 package classess;
 
-public class DataUser  {
-    
+public class DataUser {
+
     public User[] Poblado;
-
-
 
     private DataUser(Integer len) {
         this.Poblado = new User[len];
     }
 
-    public Integer getLength () {
+    public Integer getLength() {
         return this.Poblado.length;
     }
 

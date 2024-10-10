@@ -13,7 +13,6 @@ public class App {
         // System.err.println("No console");
         // System.exit(1);
         // }
-
         Integer ino = Integer.parseInt("110");
         System.out.println(ino > 0 || ino < 200);
         Console input = System.console();
