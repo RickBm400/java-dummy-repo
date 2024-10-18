@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.java_dummy_repo.java_dummy_repo.JavaDummyRepoApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.678 s -- in com.java_dummy_repo.java_dummy_repo.JavaDummyRepoApplicationTests
