@@ -1,12 +1,21 @@
-package com.java_dummy_repo.demo_repo.models;
+package com.java_dummy_repo.demo_repo.models.Users.Abstract;
 
 import java.util.Date;
-import jakarta.persistence.*;
 
-public abstract class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long _id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+
+public abstract class AbstractUser {
+    // @Id
+    // @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // private long _id;
+
+
+    private @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY) Long Id;
 
     private String name;
     private String lastName;
@@ -14,13 +23,14 @@ public abstract class User {
     private Date BirthDate;
     private Integer age;
 
-    public long get_id() {
-        return _id;
+    public Long getId() {
+        return Id;
     }
 
-    public void set_id(long _id) {
-        this._id = _id;
+    public void setId(Long id) {
+        Id = id;
     }
+
 
     public String getName() {
         return name;

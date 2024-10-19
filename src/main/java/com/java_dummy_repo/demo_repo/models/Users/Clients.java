@@ -1,11 +1,13 @@
-package com.java_dummy_repo.demo_repo.models;
+package com.java_dummy_repo.demo_repo.models.Users;
+
+import com.java_dummy_repo.demo_repo.models.Users.Abstract.AbstractUser;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "clients")
-public class Clients extends User {
+public class Clients extends AbstractUser {
 
     private String location;
 
