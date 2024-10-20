@@ -2,11 +2,11 @@ package com.java_dummy_repo.demo_repo.models.Users;
 
 import com.java_dummy_repo.demo_repo.models.Users.Abstract.AbstractUser;
 
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "clients")
+@DiscriminatorValue("client_user")
 public class Clients extends AbstractUser {
 
     private String location;

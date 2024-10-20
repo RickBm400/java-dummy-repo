@@ -2,12 +2,19 @@ package com.java_dummy_repo.demo_repo.models.Users.Abstract;
 
 import java.util.Date;
 
+import jakarta.persistence.DiscriminatorColumn;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
+@Entity
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="user_type")
 public abstract class AbstractUser {
     // @Id
     // @GeneratedValue(strategy = GenerationType.IDENTITY)
