@@ -8,8 +8,13 @@ import jakarta.persistence.Entity;
 @Entity
 @DiscriminatorValue("client_user")
 public class Clients extends AbstractUser {
-
+    
     private String location;
+
+    public Clients() {
+        // super();
+    }
+
 
     public String getLocation() {
         return location;
