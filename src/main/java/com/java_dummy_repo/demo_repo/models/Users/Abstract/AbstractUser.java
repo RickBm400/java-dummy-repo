@@ -13,22 +13,30 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 @Entity
-@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="user_type")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "user_type")
 public abstract class AbstractUser {
     // @Id
     // @GeneratedValue(strategy = GenerationType.IDENTITY)
     // private long _id;
 
-
-    private @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY) Long Id;
+    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long Id;
 
     private String name;
     private String lastName;
     @Temporal(TemporalType.DATE)
     private Date BirthDate;
     private Integer age;
+
+    public AbstractUser(String name, String lastName, Date birthDate, Integer age) {
+        this.name = name;
+        this.lastName = lastName;
+        BirthDate = birthDate;
+        this.age = age;
+    }
+
+    public AbstractUser() {
+    }
 
     public Long getId() {
         return Id;
@@ -37,7 +45,6 @@ public abstract class AbstractUser {
     public void setId(Long id) {
         Id = id;
     }
-
 
     public String getName() {
         return name;
