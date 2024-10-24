@@ -20,61 +20,61 @@ public abstract class AbstractUser {
     // @GeneratedValue(strategy = GenerationType.IDENTITY)
     // private long _id;
 
-    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long Id;
+    private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long ID;
 
-    private String name;
-    private String lastName;
+    private String Name;
+    private String LastName;
     @Temporal(TemporalType.DATE)
     private Date BirthDate;
-    private Integer age;
+    private Integer Age;
 
     public AbstractUser(String name, String lastName, Date birthDate, Integer age) {
-        this.name = name;
-        this.lastName = lastName;
+        Name = name;
+        LastName = lastName;
         BirthDate = birthDate;
-        this.age = age;
+        Age = age;
     }
 
     public AbstractUser() {
     }
 
-    public Long getId() {
-        return Id;
+    public Long getID() {
+        return ID;
     }
 
-    public void setId(Long id) {
-        Id = id;
+    public void setID(Long ID) {
+        this.ID = ID;
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     public String getLastName() {
-        return lastName;
+        return LastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastName(String LastName) {
+        this.LastName = LastName;
     }
 
     public Date getBirthDate() {
         return BirthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
-        BirthDate = birthDate;
+    public void setBirthDate(Date BirthDate) {
+        this.BirthDate = BirthDate;
     }
 
     public Integer getAge() {
-        return age;
+        return Age;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setAge(Integer Age) {
+        this.Age = Age;
     }
 }

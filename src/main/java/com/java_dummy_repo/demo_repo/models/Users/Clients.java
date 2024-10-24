@@ -6,22 +6,21 @@ import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("client_user")
+@DiscriminatorValue("CLIENT_USER")
 public class Clients extends AbstractUser {
-    
-    private String location;
+
+    private String recidence;
 
     public Clients() {
         // super();
     }
 
-
-    public String getLocation() {
-        return location;
+    public String getrecidence() {
+        return recidence;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setrecidence(String recidence) {
+        this.recidence = recidence;
     }
 
     // class-owned methods

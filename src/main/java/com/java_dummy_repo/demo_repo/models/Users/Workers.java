@@ -8,7 +8,7 @@ import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("worker_user")
+@DiscriminatorValue("WORKER_USER")
 public class Workers extends AbstractUser {
 
     public Workers(String name, String lastName, Date birthDate, Integer age) {
