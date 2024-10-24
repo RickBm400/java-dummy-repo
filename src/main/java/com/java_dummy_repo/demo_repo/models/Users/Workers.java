@@ -11,17 +11,11 @@ import jakarta.persistence.Entity;
 @DiscriminatorValue("WORKER_USER")
 public class Workers extends AbstractUser {
 
-    public Workers(String name, String lastName, Date birthDate, Integer age) {
-        super(name, lastName, birthDate, age);
-
+    public Workers() {
     }
 
-    // void addBookCopy() {
-
-    // }
-
-    // void removeBookCopy() {
-
-    // }
+    public Workers(String name, String lastName, Date birthDate, Integer age) {
+        super(name, lastName, birthDate, age);
+    }
 
 }

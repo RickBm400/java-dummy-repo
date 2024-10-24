@@ -22,59 +22,59 @@ public abstract class AbstractUser {
 
     private @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long ID;
 
-    private String Name;
-    private String LastName;
+    private String name;
+    private String lastName;
     @Temporal(TemporalType.DATE)
-    private Date BirthDate;
-    private Integer Age;
-
-    public AbstractUser(String name, String lastName, Date birthDate, Integer age) {
-        Name = name;
-        LastName = lastName;
-        BirthDate = birthDate;
-        Age = age;
-    }
-
-    public AbstractUser() {
-    }
+    private Date birthDate;
+    private Integer age;
 
     public Long getID() {
         return ID;
     }
 
-    public void setID(Long ID) {
-        this.ID = ID;
+    public void setID(Long iD) {
+        ID = iD;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
-    public void setLastName(String LastName) {
-        this.LastName = LastName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Date getBirthDate() {
-        return BirthDate;
+        return birthDate;
     }
 
-    public void setBirthDate(Date BirthDate) {
-        this.BirthDate = BirthDate;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
     public Integer getAge() {
-        return Age;
+        return age;
     }
 
-    public void setAge(Integer Age) {
-        this.Age = Age;
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public AbstractUser(String name, String lastName, Date birthDate, Integer age) {
+        this.name = name;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+        this.age = age;
+    }
+
+    public AbstractUser() {
     }
 }
